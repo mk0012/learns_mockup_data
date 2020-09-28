@@ -1,0 +1,74 @@
+1) TOP 25 Schools:
+
+ucsd.edu	193
+cps.edu	55
+ku.edu	50
+vt.edu	40
+oregonstate.edu	38
+msu.edu	33
+strathmore.edu	29
+umich.edu	25
+u.northwestern.edu	25
+nyu.edu	23
+pace.edu	22
+asu.edu	22
+berkeley.edu	18
+ucdavis.edu	17
+husky.neu.edu	16
+drexel.edu	16
+baylor.edu	16
+g.ucla.edu	15
+utexas.edu	13
+ucsc.edu	13
+monmouth.edu	13
+case.edu	13
+uw.edu	12
+usc.edu	12
+tamu.edu	12
+
+2) Located in New York: 50
+
+3) Codecademy learners are using the mobile app: 330
+
+4) Do different schools (.edu domains) prefer different courses?
+ a) learners signed up per hours
+ Sign up Hour	Learners signed up
+01	93
+02	73
+03	84
+04	74
+05	29
+06	30
+07	16
+08	18
+09	9
+10	10
+11	13
+12	27
+13	80
+14	101
+15	103
+16	183
+17	174
+18	185
+19	147
+20	138
+21	104
+22	105
+23	104
+
+b) numbers of student per course
+SQL	CPP	HTML	Javas	Java
+1004	780	612	1002	388
+
+5) and 6): best Course in Chicago and New York
+city	cpp	sql	html	javas	java
+Chicago	37	42	29	46	16
+New York	16	25	14	29	8
+
+
+ 
+ 
+ 
+ 
+ 
