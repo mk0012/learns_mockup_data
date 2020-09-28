@@ -1,0 +1,76 @@
+SELECT email_domain, COUNT (*) as students
+FROM users
+GROUP BY 1
+ORDER BY COUNT(email_domain) DESC
+LIMIT 25;
+
+-----------------
+
+SELECT COUNT(*) as 'Located in New York'
+FROM users
+WHERE city = 'New York';
+
+-----------------
+
+SELECT COUNT(*) as 'Learners using mobile app'
+FROM users
+WHERE mobile_app IS NOT NULL;
+
+----------------
+
+SELECT COUNT(*) as 'Learners using mobile app'
+FROM users
+WHERE mobile_app IS NOT NULL;
+
+-------------------
+
+WITH join_table AS 
+(SELECT *
+FROM users AS 'u'
+LEFT JOIN progress AS 'p'
+  ON u.user_id = p.user_id
+)
+SELECT DISTINCT 
+(SELECT COUNT(*)
+FROM join_table
+WHERE learn_sql IN ('completed', 'started')) AS 'SQL', 
+(SELECT COUNT(*)
+FROM join_table
+WHERE learn_cpp IN ('completed', 'started')) AS 'CPP', 
+(SELECT COUNT(*)
+FROM join_table
+WHERE learn_html IN ('completed', 'started')) AS 'HTML', 
+(SELECT COUNT(*)
+FROM join_table
+WHERE learn_javas IN ('completed', 'started')) AS 'Javas', 
+(SELECT COUNT(*)
+FROM join_table
+WHERE learn_java IN ('completed', 'started')) AS 'Java'
+FROM join_table
+GROUP BY email_domain;
+
+-----------------------
+
+(
+	SELECT u.city, COUNT(*) AS 'java'
+	FROM users AS 'u'
+	JOIN progress AS 'p'
+	ON u.user_id = p.user_id
+	WHERE p.learn_java IS NOT NULL
+	GROUP BY 1
+	)
+	SELECT c.city, c.cpp, s.sql, h.html, j.javas, i.java
+	FROM cpp AS 'c'
+	JOIN sql AS 's'
+	ON c.city = s.city
+	JOIN html AS 'h'
+	ON c.city = h.city
+	JOIN javas AS 'j'
+	ON c.city = j.city
+	JOIN java AS 'i'
+	ON c.city = i.city
+	WHERE c.city = 'New York' OR c.city = 'Chicago';
+
+
+
+
